@@ -254,7 +254,7 @@ All deliverables have been completed and analyzed according to the assignment re
 | SMOTE                  | 0.662160                | 0.99      |    0.69 |  0.81    | Good accuracy/recall, very good F1 score        |
 | ClusterCentroids       | 0.544734                | 0.99      |    0.40 |  0.56    | *Low accuracy/recall, low F1 score*             |
 | SMOTEENN               | 0.639283                | 0.99      |    0.58 |  0.73    | Good accuracy, *low recall*, very good F1 score |
-| BalancedRandomForest   | 0.788547                | 0.99      |    0.87 |  0.93    | Good accuracy/recall, **high F1 score**         |
+| BalancedRandomForest   | 0.788547                | 0.99      |    0.87 |  0.93    | Very good accuracy/recall, **high F1 score**    |
 | EasyEnsembleClassifier | 0.931660                | 0.99      |    0.94 |  0.97    | **Highest accuracy**, **high recall/F1 score**  |
 | AdaBoostClassifier     | 0.737419                | 1.00      |    1.00 |  1.00    | Very good accuracy, **highest recall/F1 score** |
 

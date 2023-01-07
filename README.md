@@ -34,7 +34,7 @@ This project and Module 18 assignment focused on cultivating knowledge and skill
 
 To study credit risk that is an inherently unbalanced classification problem, as good loans easily outnumber risky loans, we employed different algorithms to train and evaluate models with unbalanced classes. We used a combinatorial approach of over- and under-sampling using the SMOTEENN algorithm. Next, we compared two new machine learning models that reduce bias, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk. We then evaluated the performance of these models versus the performance of the over- and/or under-sampling algorithms, and composed a written recommendation on whether they should be used to predict credit risk.
 
-Below is the outline of our deliverables and a written report for presenting our results and analysis summary. It consists of three technical analysis deliverables and a summary of our study on the credit risk analysis.
+Below is the outline of our deliverables and a written report for presenting our results and analysis summary. It consists of three technical analysis deliverables and an executive summary of our study on credit risk analysis.
 
 - ☑️ Deliverable 1: Use Resampling Models to Predict Credit Risk.
 - ☑️ Deliverable 2: Use the SMOTEENN Algorithm to Predict Credit Risk.
@@ -75,16 +75,16 @@ Using our knowledge of the imbalanced-learn and scikit-learn libraries, we evalu
 
 1. Naive random oversampling RandomOverSampler.
 2. SMOTE algorithms.
-3. One of the undersampling techniques known as ClusterCentroids algorithm.
+3. One of the undersampling techniques referred as ClusterCentroids algorithm.
 
 Using these algorithms, we resampled the dataset, viewed the count of the target classes, trained a logistic regression classifier, calculated the balanced accuracy score, generated a confusion matrix, and generated a classification report. The source code can be referred in [credit_risk_resampling.ipynb](./credit_risk_resampling.ipynb), which I used to replicate the learning and resampling processes as outlined below.
 
 - Create the training variables by converting the string values into numerical ones using the Pandas `get_dummies()` method.
 - Create the target variables.
 - Check the balance of the target variables.
-- Use the oversampling RandomOverSampler and SMOTE algorithms to resample the data, then use the undersampling ClusterCentroids algorithm to resample the data. For each resampling algorithm, we appplied the LogisticRegression classifier to make predictions, evaluate the model’s performance, and generate a summary table of each model.
+- Use the oversampling RandomOverSampler and SMOTE algorithms to resample the data, then use the undersampling ClusterCentroids algorithm to resample the data. For each resampling algorithm, we applied the LogisticRegression classifier to make predictions, evaluate the model’s performance, and generate a summary table of each model.
 
-For preprocessing our training variables, I recycled `target = ["loan_status"]`, which was predefined in the starter code, and performed the binary encoding step more efficiently by targetting only the categorical columns in our feature variables. Converting the encoded values of these features to either *int* (int32) or *int64* data types worked well for our resampling purposes. The target variables consisted of **68470** of low_risk and **347** of high_risk loan statuses, which suggested that the dataset was extremely imbalanced. In this analysis, `solver='lbfgs'`, `max_iter=100`, `sampling_strategy='auto'` and `random_state=1` were globally used across all models that we evaluated.
+For preprocessing our training variables, I recycled `target = ["loan_status"]`, which was predefined in the starter code, and performed the binary encoding step more efficiently by targeting only the categorical columns in our feature variables. Converting the encoded values of these features to either *int* (int32) or *int64* data types worked well for our resampling purposes. The target variables consisted of **68470** of low_risk and **347** of high_risk loan statuses, which suggested that the dataset was extremely imbalanced. In this analysis, `solver='lbfgs'`, `max_iter=100`, `sampling_strategy='auto'`, and `random_state=1` were globally used across all models that we evaluated.
 
 ```
 target = ["loan_status"]
@@ -235,7 +235,7 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 
 ### Adaptive Boosting Classifier
 
-**Table 8** showed the confusion matrix and imbalanced classification report achieved by running the EasyEnsembleClassifier ensemble learning model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+In addition to the two ensemble learning models, I conducted experiments to ensure whether overfitting or underfitting were triggered by any of our predictive models. **Table 8** showed the confusion matrix and imbalanced classification report achieved by running the AdaBoostClassifier ensemble learning model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 <hr>
 
@@ -245,9 +245,9 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 
 ## Summary
 
-All deliverables have been completed and analyzed according to the assignment requirements, including code refactoring, and quality assurance for ensuring accurate results. I hope our stakeholders will be able to benefit from the condensed summary statistics tables instead of bulleted lists and easily compare the results achieved by applying various machine learning algorithms before drawing the final conclusions.
+All deliverables have been completed and analyzed according to the assignment requirements, including code refactoring, properly formatted outputs, and quality assurance for ensuring accurate results. I hope our stakeholders will be able to benefit from the condensed summary statistics tables instead of bulleted lists and easily compare the results achieved by applying various machine learning algorithms before drawing the final conclusions.
 
-**Table 9. Condensed summary atatistics of all the imbalanced resampling models. Precision, Recall, and F1 score are the avg/total values (Used metrics: low &lt; 60%, good = 60&ndash;70%, very good = 70&ndash;90%, high &gt; 90%).**  
+**Table 9. Condensed summary statistics of all the imbalanced resampling models. Precision, Recall, and F1 score are the avg/total values (Used metrics: low &lt; 60%, good = 60&ndash;70%, very good = 70&ndash;90%, high &gt; 90%).**  
 | ML method              | Balanced accuracy score | Precision | Recall  | F1 score | Conclusion                                      |
 | :--                    |                     --: |       --: |     --: |      --: | :--:                                            |
 | RandomOverSampler      | 0.660146                | 0.99      |    0.63 |  0.77    | Good accuracy/recall, very good F1 score        |
@@ -258,12 +258,12 @@ All deliverables have been completed and analyzed according to the assignment re
 | EasyEnsembleClassifier | 0.931660                | 0.99      |    0.94 |  0.97    | **Highest accuracy**, **high recall/F1 score**  |
 | AdaBoostClassifier     | 0.737419                | 1.00      |    1.00 |  1.00    | Very good accuracy, **highest recall/F1 score** |
 
-**Table 9** provided the comparison and executive summary across the oversampling, undersampling, over- and under-sampling combinational approach, ensemble learning (aka bootstrap aggregation) technique, and adaptive boosting technique that we have analyzed thus far. Our analysis results suggested that:
+**Table 9** provided the comparison and executive summary across the oversampling, undersampling, over- and under-sampling combinational approaches, ensemble learning techniques, and adaptive boosting techniques that we have analyzed thus far. The ensemble learning models, which commonly employ one of the so-called bagging, stacking, and boosting algorithms, performed better on average compared to the standard over- and under-sampling approaches. Here are the takeaways from our study to predict credit risk.
 
-- SMOTE oversampling technique performed the best and provided the least bias towards predicting the high_risk loan statuses amongst the over- and under-sampling learning models (**Table 2**, **Table 9**).
-- The ClusterCentroids undersampling technique seemed to provide the worst overall results and hence, I would recommend to avoid using this model for predicting credit risk. The undersampling model might have deleted some valuable samples from the majority class when resampling our training dataset  (**Table 3**, **Table 9**).
-- The **EasyEnsembleClassifier** ensemble learning model seemed to provide the highest balanced accuracy score and well balanced recall (sensitivity) scores between the high_risk and low_risk loan statuses (**Table 7**, **Table 9**).
-- Another ensemble learning model called **AdaBoostClassifier** that I additionally validated seemed to provide an extremely strong prediction result, however, it might be too aggressive by just looking at its perfect precision, recall, and F1 scores. We have to consider whether we should use depending on the business objectives because this model provided the lowest sensitivity in predicting the high_risk loan statuses  (**Table 8**, **Table 9**).
+- The SMOTE oversampling technique performed the best and provided the least bias towards predicting the high_risk loan statuses amongst the over- and under-sampling learning models (**Table 2**, **Table 9**).
+- The ClusterCentroids undersampling technique seemed to provide the worst overall results and hence I would recommend avoiding using the undersampling model for predicting credit risk in this study. The undersampling model might have deleted some valuable samples from the majority class when resampling our training dataset (**Table 3**, **Table 9**).
+- The **EasyEnsembleClassifier** ensemble learning model seemed to have provided the highest balanced accuracy score and well balanced recall (sensitivity) scores between the high_risk and low_risk loan statuses (**Table 7**, **Table 9**).
+- Another ensemble learning model called **AdaBoostClassifier** that I additionally validated seemed to have provided an extremely strong prediction result, however, it might be too aggressive by just looking at its perfect precision, recall, and F1 scores. We have to consider which learning model to implement carefully depending on the business objectives because this model provided the lowest sensitivity in predicting the high_risk loan statuses (**Table 8**, **Table 9**).
 
 ## References
 

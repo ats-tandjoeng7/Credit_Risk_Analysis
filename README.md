@@ -245,7 +245,7 @@ In addition to the two ensemble learning models, I conducted experiments to ensu
 
 ## Summary
 
-All deliverables have been completed and analyzed according to the assignment requirements, including code refactoring, properly formatted outputs, and quality assurance for ensuring accurate results. I hope our stakeholders will be able to benefit from the condensed summary statistics tables instead of bulleted lists and easily compare the results achieved by applying various machine learning algorithms before drawing the final conclusions.
+All deliverables have been completed and analyzed according to the assignment requirements, including code refactoring, properly formatted outputs, and quality assurance for ensuring accurate results. I hope our users and stakeholders will be able to benefit from the condensed summary statistics tables instead of bulleted lists and easily compare the results achieved by applying various machine learning algorithms before drawing the final conclusions.
 
 **Table 9. Condensed summary statistics of all the imbalanced resampling models. Precision, Recall, and F1 score are the avg/total values (Used metrics: low &lt; 60%, good = 60&ndash;70%, very good = 70&ndash;90%, high &gt; 90%).**  
 | ML method              | Balanced accuracy score | Precision | Recall  | F1 score | Conclusion                                      |
@@ -258,12 +258,12 @@ All deliverables have been completed and analyzed according to the assignment re
 | EasyEnsembleClassifier | 0.931660                | 0.99      |    0.94 |  0.97    | **Highest accuracy**, **high recall/F1 score**  |
 | AdaBoostClassifier     | 0.737419                | 1.00      |    1.00 |  1.00    | Very good accuracy, **highest recall/F1 score** |
 
-**Table 9** provided the comparison and executive summary across the oversampling, undersampling, over- and under-sampling combinational approaches, ensemble learning techniques, and adaptive boosting techniques that we have analyzed thus far. The ensemble learning models, which commonly employ one of the so-called bagging, stacking, and boosting algorithms, performed better on average compared to the standard over- and under-sampling approaches. Here are the takeaways from our study to predict credit risk.
+**Table 9** provided the comparison and executive summary across the random oversampling/undersampling approaches, combinatorial SMOTEENN approaches, ensemble learning techniques, and adaptive boosting techniques that we have analyzed thus far. The ensemble learning models, which commonly employ one of the so-called bagging, stacking, and boosting algorithms, performed better on average compared to the standard over- and under-sampling approaches. Here are the takeaways from our study to predict credit risk.
 
-- The SMOTE oversampling technique performed the best and provided the least bias towards predicting the high_risk loan statuses amongst the over- and under-sampling learning models (**Table 2**, **Table 9**).
+- The SMOTE oversampling technique performed the best and provided the least bias towards predicting the high_risk loan statuses amongst the oversampling/undersampling/combinatorial algorithms (**Table 2**, **Table 9**).
 - The ClusterCentroids undersampling technique seemed to provide the worst overall results and hence I would recommend avoiding using the undersampling model for predicting credit risk in this study. The undersampling model might have deleted some valuable samples from the majority class when resampling our training dataset (**Table 3**, **Table 9**).
-- The **EasyEnsembleClassifier** ensemble learning model seemed to have provided the highest balanced accuracy score and well balanced recall (sensitivity) scores between the high_risk and low_risk loan statuses (**Table 7**, **Table 9**).
-- Another ensemble learning model called **AdaBoostClassifier** that I additionally validated seemed to have provided an extremely strong prediction result, however, it might be too aggressive by just looking at its perfect precision, recall, and F1 scores. We have to consider which learning model to implement carefully depending on the business objectives because this model provided the lowest sensitivity in predicting the high_risk loan statuses (**Table 8**, **Table 9**).
+- The **EasyEnsembleClassifier** ensemble learning model seemed to have provided the highest balanced accuracy score and well balanced recall (sensitivity) scores between the high_risk and low_risk loan statuses (**Table 7**, **Table 9**). This would be the best model for predicting credit risk, especially in terms of balanced accuracy and overall scores.
+- Another ensemble learning model, **AdaBoostClassifier**, seemed to have provided an extremely strong prediction result, however, it might be too aggressive by just looking at its perfect precision, recall, and F1 scores. We have to consider which learning model to implement carefully depending on the business objectives because this adaptive boosting algorithm provided the lowest sensitivity in predicting the high_risk loan statuses (**Table 8**, **Table 9**).
 
 ## References
 

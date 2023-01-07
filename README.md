@@ -149,7 +149,7 @@ Counter(y_resampled.value_counts())
 <hr>
 
 **Table 1. (a) Confusion matrix and (b) imbalanced classification report of the RandomOverSampler oversampling model.**
-<tr><td><img src='Data/RandomOverSampler_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/RandomOverSampler_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr>
+<table><tr><td><img src='Data/RandomOverSampler_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/RandomOverSampler_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr></table>
 <hr>
 
 ### SMOTE Oversampling
@@ -166,7 +166,7 @@ Counter(y_resampled.value_counts())
 <hr>
 
 **Table 2. (a) Confusion matrix and (b) imbalanced classification report of the SMOTE oversampling model.**
-<tr><td><img src='Data/SMOTE_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/SMOTE_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr>
+<table><tr><td><img src='Data/SMOTE_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/SMOTE_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr></table>
 <hr>
 
 ### Cluster Centroid Undersampling
@@ -184,7 +184,7 @@ Counter(y_resampled.value_counts())
 <hr>
 
 **Table 3. (a) Confusion matrix and (b) imbalanced classification report of the ClusterCentroids undersampling model.**
-<tr><td><img src='Data/ClusterCentroids_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/ClusterCentroids_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr>
+<table><tr><td><img src='Data/ClusterCentroids_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/ClusterCentroids_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr></table>
 <hr>
 
 ## Deliverable 2: Use the SMOTEENN Algorithm to Predict Credit Risk
@@ -202,7 +202,7 @@ Counter(y_resampled.value_counts())
 <hr>
 
 **Table 4. (a) Confusion matrix and (b) imbalanced classification report of the combinatorial SMOTEENN model.**
-<tr><td><img src='Data/SMOTEENN_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/SMOTEENN_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr>
+<table><tr><td><img src='Data/SMOTEENN_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/SMOTEENN_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr></table>
 <hr>
 
 ## Deliverable 3: Use Ensemble Classifiers to Predict Credit Risk
@@ -216,7 +216,7 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 <hr>
 
 **Table 5. (a) Confusion matrix and (b) imbalanced classification report of the BalancedRandomForestClassifier ensemble learning model.**
-<tr><td><img src='Data/brf_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/brf_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr>
+<table><tr><td><img src='Data/brf_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/brf_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr></table>
 <hr>
 
 **Table 6. Top 10 features sorted in descending order by feature importance.**  
@@ -230,7 +230,7 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 <hr>
 
 **Table 7. (a) Confusion matrix and (b) imbalanced classification report of the EasyEnsembleClassifier ensemble learning model.**
-<tr><td><img src='Data/EasyEnsembleClassifier_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/EasyEnsembleClassifier_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr>
+<table><tr><td><img src='Data/EasyEnsembleClassifier_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/EasyEnsembleClassifier_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr></table>
 <hr>
 
 ### Adaptive Boosting Classifier
@@ -240,7 +240,7 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 <hr>
 
 **Table 8. (a) Confusion matrix and (b) imbalanced classification report of the AdaBoostClassifier ensemble learning model.**
-<tr><td><img src='Data/AdaBoostClassifier_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/AdaBoostClassifier_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr>
+<table><tr><td><img src='Data/AdaBoostClassifier_nen100_rsn1_cm.png' title='(a) Confusion matrix'></td><td><img src='Data/AdaBoostClassifier_nen100_rsn1_iclf_report.png' title='(b) Imbalanced clf report'></td></tr></table>
 <hr>
 
 ## Summary

@@ -137,7 +137,7 @@ print(iclf_report)
 ```
 ### Naive Random Oversampling
 
-We used the following code snippet to resample our training dataset, which caused each class to equally contain **51366** counts (identical to the counts of the majority class in the training dataset). **Table 1** showed the confusion matrix and imbalanced classification report of the RandomOverSampler oversampling model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+We used the following code snippet to resample our training dataset, which caused each class to equally contain **51366** counts (identical to the counts of the majority class in the training dataset). **Table 1** shows the confusion matrix and imbalanced classification report of the RandomOverSampler oversampling model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 ```
 # Resample the training data with the RandomOversampler
@@ -154,7 +154,7 @@ Counter(y_resampled.value_counts())
 
 ### SMOTE Oversampling
 
-We used the following code snippet to resample our training dataset, which caused each class to equally contain **51366** counts (identical to the counts of the majority class in the training dataset). **Table 2** showed the confusion matrix and imbalanced classification report of the SMOTE oversampling model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+We used the following code snippet to resample our training dataset, which caused each class to equally contain **51366** counts (identical to the counts of the majority class in the training dataset). **Table 2** shows the confusion matrix and imbalanced classification report of the SMOTE oversampling model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 ```
 # Resample the training data with SMOTE
@@ -171,7 +171,7 @@ Counter(y_resampled.value_counts())
 
 ### Cluster Centroid Undersampling
 
-We used the following code snippet to resample our training dataset, which reduced each class to **246** counts (identical to the counts of the minority class in the training dataset). **Table 3** showed the confusion matrix and imbalanced classification report of the ClusterCentroids undersampling model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+We used the following code snippet to resample our training dataset, which reduced each class to **246** counts (identical to the counts of the minority class in the training dataset). **Table 3** shows the confusion matrix and imbalanced classification report of the ClusterCentroids undersampling model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 ```
 # Resample the data using the ClusterCentroids resampler
@@ -189,7 +189,7 @@ Counter(y_resampled.value_counts())
 
 ## Deliverable 2: Use the SMOTEENN Algorithm to Predict Credit Risk
 
-Using our knowledge of the imbalanced-learn and scikit-learn libraries, we employed a combinatorial approach of over- and under-sampling with the SMOTEENN algorithm to determine if the results from the combinatorial approach are better at predicting credit risk than the resampling algorithms from Deliverable 1. We used the following code snippet to resample our training dataset, which further rebalanced each class to contain **51361** and **46653** counts, respectively. **Table 4** showed the confusion matrix and imbalanced classification report of the combinatorial SMOTEENN model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+Using our knowledge of the imbalanced-learn and scikit-learn libraries, we employed a combinatorial approach of over- and under-sampling with the SMOTEENN algorithm to determine if the results from the combinatorial approach are better at predicting credit risk than the resampling algorithms from Deliverable 1. We used the following code snippet to resample our training dataset, which further rebalanced each class to contain **51361** and **46653** counts, respectively. **Table 4** shows the confusion matrix and imbalanced classification report of the combinatorial SMOTEENN model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 ```
 # Resample the training data with SMOTEENN
@@ -211,7 +211,7 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 
 ### Balanced Random Forest Classifier 
 
-**Table 5** showed the confusion matrix and imbalanced classification report achieved by running the BalancedRandomForestClassifier ensemble learning model. **Table 6** illustrated the top 10 features sorted in descending order by feature importance after applying the BalancedRandomForestClassifier ensemble learning model. The complete list of features can also be reviewed in [brf_model_sorted_feature_importance.csv](./Data/brf_model_sorted_feature_importance.csv). The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+**Table 5** shows the confusion matrix and imbalanced classification report achieved by running the BalancedRandomForestClassifier ensemble learning model. **Table 6** illustrates the top 10 features sorted in descending order by feature importance after applying the BalancedRandomForestClassifier ensemble learning model. The complete list of features can also be reviewed in [brf_model_sorted_feature_importance.csv](./Data/brf_model_sorted_feature_importance.csv). The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 <hr>
 
@@ -225,7 +225,7 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 
 ### Easy Ensemble Classifier
 
-**Table 7** showed the confusion matrix and imbalanced classification report achieved by running the EasyEnsembleClassifier ensemble learning model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+**Table 7** shows the confusion matrix and imbalanced classification report achieved by running the EasyEnsembleClassifier ensemble learning model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 <hr>
 
@@ -235,7 +235,7 @@ Using our knowledge of the imblearn.ensemble library, we trained and compared tw
 
 ### Adaptive Boosting Classifier
 
-In addition to the two ensemble learning models, I conducted experiments to ensure whether overfitting or underfitting were triggered by any of our predictive models. **Table 8** showed the confusion matrix and imbalanced classification report achieved by running the AdaBoostClassifier ensemble learning model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
+In addition to the two ensemble learning models, I conducted experiments to ensure whether overfitting or underfitting were triggered by any of our predictive models. **Table 8** shows the confusion matrix and imbalanced classification report achieved by running the AdaBoostClassifier ensemble learning model. The balanced accuracy scores and condensed summary statistics are summarized in **Table 9** in the [Summary](#summary) section.
 
 <hr>
 
@@ -258,7 +258,7 @@ All deliverables have been completed and analyzed according to the assignment re
 | EasyEnsembleClassifier | 0.931660                | 0.99      |    0.94 |  0.97    | **Highest accuracy**, **high recall/F1 score**  |
 | AdaBoostClassifier     | 0.737419                | 1.00      |    1.00 |  1.00    | Very good accuracy, **highest recall/F1 score** |
 
-**Table 9** provided the comparison and executive summary across the random oversampling/undersampling approaches, combinatorial SMOTEENN approaches, ensemble learning techniques, and adaptive boosting techniques that we have analyzed thus far. The ensemble learning models, which commonly employ one of the so-called bagging, stacking, and boosting algorithms, performed better on average compared to the standard over- and under-sampling approaches. Here are the takeaways from our study to predict credit risk.
+**Table 9** provides the comparison and executive summary across the random oversampling/undersampling approaches, combinatorial SMOTEENN approaches, ensemble learning techniques, and adaptive boosting techniques that we have analyzed thus far. The ensemble learning models, which commonly employ one of the so-called bagging, stacking, and boosting algorithms, performed better on average compared to the standard over- and under-sampling approaches. Here are the takeaways from our study to predict credit risk.
 
 - The SMOTE oversampling technique performed the best and provided the least bias towards predicting the high_risk loan statuses amongst the oversampling/undersampling/combinatorial algorithms (**Table 2**, **Table 9**).
 - The ClusterCentroids undersampling technique seemed to provide the worst overall results and hence I would recommend avoiding using the undersampling model for predicting credit risk in this study. The undersampling model might have deleted some valuable samples from the majority class when resampling our training dataset (**Table 3**, **Table 9**).
